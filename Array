@@ -1,0 +1,96 @@
+package DSLab1Ass;
+import java.util.Scanner;
+public class Arraymod
+{
+        public static void main(String[] args)
+        {
+
+            // create an array to store integer
+
+            int[] arr = new int[10];
+
+            System.out.println("value of an array");
+
+            for(int i=0;i<arr.length;i++)
+            {
+                System.out.print(arr[i]);
+                System.out.print(",");
+            }
+
+            // static initialization of array
+            arr[0]=100;
+            arr[1]=200;
+            arr[2]=1080;
+            arr[3]=400;
+            arr[4]=1040;
+            arr[5]=1500;
+            arr[7]=1008;
+            arr[8]=1080;
+            arr[9]=1050;
+            System.out.println();
+
+            // print the array
+
+            System.out.println("Static value = array");
+
+            for(int i=0;i<arr.length;i++)
+            {
+                System.out.print(arr[i]);
+                System.out.print(",");
+            }
+
+            // command line initialization of array
+
+            for(int i=0;i<args.length && i<arr.length;i++){
+
+                arr[i]=Integer.parseInt(args[i]);
+
+            }
+
+            System.out.println();
+
+            System.out.println("Array initialize by command line value");
+
+            for(int i=0;i<arr.length;i++)
+            {
+                System.out.print(arr[i]);
+                System.out.print(",");
+            }
+            // user initialization of array using scanner class
+            Scanner sc = new Scanner(System.in);
+            System.out.println();
+            System.out.println("Enter  10 integers");
+            for (int i = 0; i < arr.length; i++)
+            {
+                arr[i]=sc.nextInt();
+            }
+            System.out.println("Array using Scanner ");
+            System.out.println("Printing array with intialize with user input");
+            for(int i=0;i<arr.length;i++)
+            {   if(i==arr.length-1)
+            {
+                System.out.print(arr[i]);
+            }
+            else
+                {
+                System.out.print(arr[i]);
+                System.out.print(",");
+
+            }
+            }
+            System.out.println();
+
+            // sum and average of aal element
+
+            double sum=0;
+            for (int i = 0; i < arr.length; i++)
+            {
+                sum=sum+arr[i];
+            }
+            System.out.println("The Sum of the given array "+sum);
+            double avg = (double)sum/10;
+            System.out.println("The average values =" + "" +avg);
+        }
+
+    }
+
